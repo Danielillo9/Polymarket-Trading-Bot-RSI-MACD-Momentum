@@ -1,5 +1,5 @@
 import { ethers } from "ethers";
-import { ClobClient, Side, OrderType, Chain } from "clob-client-sdk";
+import { ClobClient, Side, OrderType, Chain } from "clob-client-sdks";
 import type { PolymarketConfig } from "./config.js";
 
 export type { ClobClient };
